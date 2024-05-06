@@ -9,7 +9,7 @@ namespace conway {
 	/// <summary>
 	/// Dummy function to test if cuda actually works.
 	/// </summary>
-	__global__ void fill(int value, int* data, int len);
+	__global__ void fill(u8 value, u8* data, int len);
 
 	/// <summary>
 	/// Stupid implementation.
