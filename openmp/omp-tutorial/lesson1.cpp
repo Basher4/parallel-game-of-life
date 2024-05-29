@@ -1,4 +1,4 @@
-#include "lesson1.h"
+#include "lessons.h"
 
 #include <cassert>
 #include <cstdint>
@@ -113,27 +113,29 @@ void lesson1()
     int max_threads = omp_get_max_threads();
     omp_set_num_threads(max_threads);
 
-    printf("Ground trugh\n%.12f\n\n", std::numbers::pi);
+    printf("Lesson 1\nGround truth: %.12f\n\n", std::numbers::pi);
 
     double start, pi, duration;
 
     start = omp_get_wtime();
     pi = pi_st();
     duration = omp_get_wtime() - start;
-    printf("%.12f in %.3f ms\n", pi, duration * 1e3);
+    printf("ST:               %.12f in %.3f ms\n", pi, duration * 1e3);
 
     start = omp_get_wtime();
     pi = pi_mt();
     duration = omp_get_wtime() - start;
-    printf("%.12f in %.3f ms\n", pi, duration * 1e3);
+    printf("MT:               %.12f in %.3f ms\n", pi, duration * 1e3);
 
     start = omp_get_wtime();
     pi = pi_mt_reference();
     duration = omp_get_wtime() - start;
-    printf("%.12f in %.3f ms\n", pi, duration * 1e3);
+    printf("MT Ref:           %.12f in %.3f ms\n", pi, duration * 1e3);
 
     start = omp_get_wtime();
     pi = pi_mt_false_sharing();
     duration = omp_get_wtime() - start;
-    printf("%.12f in %.3f ms\n", pi, duration * 1e3);
+    printf("MT False Sharing: %.12f in %.3f ms\n", pi, duration * 1e3);
+
+    printf("\n\n");
 }

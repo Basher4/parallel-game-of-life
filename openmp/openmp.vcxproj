@@ -132,10 +132,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="omp-tutorial\lesson1.cpp" />
+    <ClCompile Include="omp-tutorial\lesson2.cpp" />
     <ClCompile Include="openmp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="omp-tutorial\lesson1.h" />
+    <ClInclude Include="omp-tutorial\lessons.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

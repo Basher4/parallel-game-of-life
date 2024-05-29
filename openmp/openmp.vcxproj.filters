@@ -21,9 +21,12 @@
     <ClCompile Include="omp-tutorial\lesson1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="omp-tutorial\lesson2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="omp-tutorial\lesson1.h">
+    <ClInclude Include="omp-tutorial\lessons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
