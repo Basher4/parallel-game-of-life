@@ -78,6 +78,36 @@ double pi_mt_reference()
     return pi * step;
 }
 
+double pi_mt_false_sharing()
+{
+    constexpr int NUM_THREADS = 4;
+    constexpr int PAD = 8; // Cache line size 64B.
+
+    int nthreads = NUM_THREADS;
+    double pi = 0;
+    double sum[NUM_THREADS][PAD] = {};
+    const double step = 1.0 / num_steps;
+    omp_set_num_threads(NUM_THREADS);
+
+#pragma omp parallel
+    {
+        int id = omp_get_thread_num();
+        int nthrds = omp_get_num_threads();
+        if (id == 0) nthreads = nthrds;
+
+        for (int i = id; i < num_steps; i += nthrds) {
+            double x = (i + 0.5) * step;
+            sum[id][0] += 4.0 / (1.0 + x * x);
+        }
+    }
+
+    for (int i = 0; i < nthreads; i++) {
+        pi += sum[i][0];
+    }
+
+    return pi * step;
+}
+
 void lesson1()
 {
     int max_threads = omp_get_max_threads();
@@ -99,6 +129,11 @@ void lesson1()
 
     start = omp_get_wtime();
     pi = pi_mt_reference();
+    duration = omp_get_wtime() - start;
+    printf("%.12f in %.3f ms\n", pi, duration * 1e3);
+
+    start = omp_get_wtime();
+    pi = pi_mt_false_sharing();
     duration = omp_get_wtime() - start;
     printf("%.12f in %.3f ms\n", pi, duration * 1e3);
 }
