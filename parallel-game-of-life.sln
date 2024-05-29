@@ -5,16 +5,32 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cuda", "cuda\cuda.vcxproj", "{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openmp", "openmp\openmp.vcxproj", "{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Debug|x64.ActiveCfg = Debug|x64
 		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Debug|x64.Build.0 = Debug|x64
+		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Debug|x86.ActiveCfg = Debug|x64
+		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Debug|x86.Build.0 = Debug|x64
 		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Release|x64.ActiveCfg = Release|x64
 		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Release|x64.Build.0 = Release|x64
+		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Release|x86.ActiveCfg = Release|x64
+		{2A5957A7-2E8D-411B-ACC9-332F3E726EA7}.Release|x86.Build.0 = Release|x64
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Debug|x64.ActiveCfg = Debug|x64
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Debug|x64.Build.0 = Debug|x64
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Debug|x86.ActiveCfg = Debug|Win32
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Debug|x86.Build.0 = Debug|Win32
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Release|x64.ActiveCfg = Release|x64
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Release|x64.Build.0 = Release|x64
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Release|x86.ActiveCfg = Release|Win32
+		{A7B2783A-D86D-4DB4-A4A0-840AADBD9E32}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
