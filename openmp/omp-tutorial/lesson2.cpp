@@ -21,7 +21,6 @@ double pi_mt_critical()
 
     #pragma omp parallel
     {
-        int tid = omp_get_thread_num();
         int nthreads = omp_get_num_threads();
 
         for (int i = 0; i < num_steps; i += nthreads) {
@@ -44,7 +43,6 @@ double pi_mt_atomic()
 
     #pragma omp parallel
     {
-        int tid = omp_get_thread_num();
         int nthreads = omp_get_num_threads();
 
         for (int i = 0; i < num_steps; i += nthreads) {
@@ -67,7 +65,6 @@ double pi_mt_ref_critical()
 
     #pragma omp parallel
     {
-        int tid = omp_get_thread_num();
         int nthreads = omp_get_num_threads();
         double psum = 0.0;
 
@@ -91,7 +88,6 @@ double pi_mt_ref_atomic()
 
     #pragma omp parallel
     {
-        int tid = omp_get_thread_num();
         int nthreads = omp_get_num_threads();
         double psum = 0.0;
 
