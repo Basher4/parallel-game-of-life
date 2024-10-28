@@ -24,6 +24,9 @@
     <ClCompile Include="omp-tutorial\lesson2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="omp-tutorial\mandel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="omp-tutorial\lessons.h">

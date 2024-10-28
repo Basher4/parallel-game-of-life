@@ -5,6 +5,8 @@
 
 int main()
 {
-    lesson1();
-    lesson2();
+    // lesson1();
+    // lesson2();
+    // lesson3();
+    lesson3_mandelbrot();
 }
